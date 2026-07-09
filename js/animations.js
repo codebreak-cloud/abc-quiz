@@ -91,14 +91,17 @@ function settleParkedCart(parkedEl) {
    clockwise arc paths starting at 12 o'clock (not plain <circle>s),
    so the sweep direction and start point are unambiguous rather
    than relying on the browser's default circle-dashing behavior.
-   The number counts up from 1, and the whole dial grows and glows
-   brighter in step with the count.
+   On reveal the ring spins several full turns and decelerates to a
+   stop exactly as the arc finishes filling and the number finishes
+   counting up from 1 — a "wheel slowing down to land on the result"
+   effect. Only the <svg> spins; the number readout stays upright.
    --------------------------------------------------------- */
 const GRIP_GAUGE_GLOW_RGB = {
   light: "141, 159, 56",   // --green-500
   firm: "253, 185, 19",    // --yellow-500
   deep: "132, 90, 166",    // --purple-600
 };
+const GRIP_GAUGE_SPIN_TURNS = 3;
 
 function animateGripGauge(fillCircleEl, scoreEl, ringEl, score, bandKey) {
   const circ = fillCircleEl.getTotalLength();
@@ -107,6 +110,7 @@ function animateGripGauge(fillCircleEl, scoreEl, ringEl, score, bandKey) {
   const bandVar = { light: "--band-light", firm: "--band-firm", deep: "--band-deep" }[bandKey] || "--band-firm";
   fillCircleEl.style.stroke = `var(${bandVar})`;
   const glowRgb = GRIP_GAUGE_GLOW_RGB[bandKey] || GRIP_GAUGE_GLOW_RGB.firm;
+  const svgEl = ringEl ? ringEl.querySelector("svg") : null;
 
   function renderDial(eased) {
     const scale = 0.85 + eased * 0.21;
@@ -116,6 +120,9 @@ function animateGripGauge(fillCircleEl, scoreEl, ringEl, score, bandKey) {
     if (ringEl) {
       ringEl.style.transform = `scale(${scale})`;
       ringEl.style.boxShadow = eased > 0 ? `0 0 ${blur}px ${spread}px rgba(${glowRgb}, ${alpha})` : "none";
+    }
+    if (svgEl) {
+      svgEl.style.transform = `rotate(${(1 - eased) * 360 * GRIP_GAUGE_SPIN_TURNS}deg)`;
     }
   }
 
@@ -130,12 +137,12 @@ function animateGripGauge(fillCircleEl, scoreEl, ringEl, score, bandKey) {
   fillCircleEl.style.strokeDashoffset = String(circ);
   scoreEl.textContent = "1";
   renderDial(0);
-  const duration = 1400;
+  const duration = 2200;
   const start = performance.now();
 
   function tick(now) {
     const t = Math.min(1, (now - start) / duration);
-    const eased = easeOutCubic(t);
+    const eased = easeOutExpo(t);
     const offset = circ - (eased * score / 100) * circ;
     fillCircleEl.style.strokeDashoffset = String(offset);
     scoreEl.textContent = String(Math.max(1, Math.round(eased * score)));
