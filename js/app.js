@@ -18,10 +18,22 @@
   let isTransitioning = false;
 
   /* ---------------- view switching ---------------- */
+  const EXITABLE_VIEWS = ["view-quiz", "view-capture"];
+
   function showView(id) {
     document.querySelectorAll(".view").forEach((v) => v.classList.remove("is-active"));
     document.getElementById(id).classList.add("is-active");
     window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
+
+    const showExit = EXITABLE_VIEWS.includes(id);
+    document.getElementById("header-cta-btn").classList.toggle("is-hidden", showExit);
+    document.getElementById("header-exit-btn").classList.toggle("is-hidden", !showExit);
+  }
+
+  function exitQuiz() {
+    state.currentIndex = 0;
+    state.answers = {};
+    showView("view-landing");
   }
 
   /* ---------------- helpers ---------------- */
@@ -284,6 +296,7 @@
     document.querySelectorAll('[data-action="start-quiz"]').forEach((btn) => {
       btn.addEventListener("click", startQuiz);
     });
+    document.getElementById("header-exit-btn").addEventListener("click", exitQuiz);
     setupCaptureForm();
     initHeroCart();
   });
