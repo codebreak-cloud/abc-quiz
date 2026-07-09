@@ -26,6 +26,7 @@
   --shadow-lg: 0 18px 44px rgba(61, 42, 79, 0.14);
   --shadow-brand: 0 12px 28px rgba(132, 90, 166, 0.28);
   --shadow-accent: 0 12px 28px rgba(253, 185, 19, 0.30);
+  --shadow-support: 0 14px 32px rgba(141, 159, 56, 0.32);
 
   /* Layout */
   --content-max: 1120px;

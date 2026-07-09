@@ -353,10 +353,6 @@ body { overflow-x: hidden; }
 }
 
 .question-card {
-  background: var(--surface-card);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  padding: var(--space-6);
   max-width: var(--reading-max);
   margin: 0 auto;
   opacity: 0;
@@ -385,10 +381,10 @@ body { overflow-x: hidden; }
   font-weight: var(--fw-semibold);
   font-size: var(--text-body);
   color: var(--text-heading);
-  background: var(--surface-card);
-  border: 2px solid var(--border-soft);
+  background: var(--green-100);
+  border: 2px solid var(--green-300);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-support);
   cursor: pointer;
   transition: transform var(--dur-fast) var(--ease-spring),
     background var(--dur-fast) var(--ease-out),
