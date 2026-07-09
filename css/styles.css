@@ -592,8 +592,9 @@ body { overflow-x: hidden; }
   position: relative;
   width: 180px;
   height: 180px;
+  border-radius: 50%;
 }
-.grip-gauge__ring svg { transform: rotate(-90deg); }
+.grip-gauge__ring svg { width: 100%; height: 100%; }
 .grip-gauge__track { fill: none; stroke: var(--surface-tint); stroke-width: 12; }
 .grip-gauge__fill {
   fill: none;
