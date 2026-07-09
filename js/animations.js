@@ -87,25 +87,48 @@ function settleParkedCart(parkedEl) {
 /* ---------------------------------------------------------
    Grip strength gauge — full circular dial (ports ScoreMeter.jsx).
    Ring color is band-driven (light/firm/deep -> green/yellow/purple,
-   per tokens/colors.css --band-*), fill sweeps and the number counts
-   up together on results load.
+   per tokens/colors.css --band-*). The fill sweeps clockwise from
+   north (12 o'clock, via the ring's -90deg rotation in CSS), the
+   number counts up from 1, and the whole dial grows and glows
+   brighter in step with the count.
    --------------------------------------------------------- */
-function animateGripGauge(fillCircleEl, scoreEl, score, bandKey) {
+const GRIP_GAUGE_GLOW_RGB = {
+  light: "141, 159, 56",   // --green-500
+  firm: "253, 185, 19",    // --yellow-500
+  deep: "132, 90, 166",    // --purple-600
+};
+
+function animateGripGauge(fillCircleEl, scoreEl, ringEl, score, bandKey) {
   const r = fillCircleEl.r.baseVal.value;
   const circ = 2 * Math.PI * r;
   fillCircleEl.style.strokeDasharray = String(circ);
 
   const bandVar = { light: "--band-light", firm: "--band-firm", deep: "--band-deep" }[bandKey] || "--band-firm";
   fillCircleEl.style.stroke = `var(${bandVar})`;
+  const glowRgb = GRIP_GAUGE_GLOW_RGB[bandKey] || GRIP_GAUGE_GLOW_RGB.firm;
+
+  function renderDial(eased) {
+    const scale = 0.85 + eased * 0.21;
+    const blur = eased * 45;
+    const spread = eased * 6;
+    const alpha = 0.15 + eased * 0.45;
+    if (ringEl) {
+      ringEl.style.transform = `scale(${scale})`;
+      ringEl.style.boxShadow = `0 0 ${blur}px ${spread}px rgba(${glowRgb}, ${alpha})`;
+    }
+  }
 
   const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (reduceMotion) {
     fillCircleEl.style.strokeDashoffset = String(circ - (score / 100) * circ);
     scoreEl.textContent = String(score);
+    renderDial(1);
     return;
   }
 
   fillCircleEl.style.strokeDashoffset = String(circ);
+  scoreEl.textContent = "1";
+  renderDial(0);
   const duration = 1400;
   const start = performance.now();
 
@@ -114,7 +137,8 @@ function animateGripGauge(fillCircleEl, scoreEl, score, bandKey) {
     const eased = easeOutCubic(t);
     const offset = circ - (eased * score / 100) * circ;
     fillCircleEl.style.strokeDashoffset = String(offset);
-    scoreEl.textContent = String(Math.round(eased * score));
+    scoreEl.textContent = String(Math.max(1, Math.round(eased * score)));
+    renderDial(eased);
     if (t < 1) requestAnimationFrame(tick);
   }
   requestAnimationFrame(tick);

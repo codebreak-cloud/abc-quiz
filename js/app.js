@@ -258,7 +258,8 @@
 
     const gaugeFill = document.getElementById("grip-gauge-fill");
     const gaugeScore = document.getElementById("grip-gauge-score");
-    animateGripGauge(gaugeFill, gaugeScore, result.score, result.band.key);
+    const gaugeRing = document.getElementById("grip-gauge-ring");
+    animateGripGauge(gaugeFill, gaugeScore, gaugeRing, result.score, result.band.key);
 
     settleParkedCart(document.getElementById("coaster-parked"));
 
