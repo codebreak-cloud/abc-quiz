@@ -404,9 +404,9 @@ body { overflow-x: hidden; }
 .answer-btn:hover:not([disabled]) { border-color: var(--border-brand); transform: translateY(-2px); }
 .answer-btn.is-selected {
   color: var(--text-on-brand);
-  background: var(--brand);
-  border-color: var(--brand);
-  box-shadow: var(--shadow-brand);
+  background: var(--support);
+  border-color: var(--support);
+  box-shadow: var(--shadow-support);
 }
 .answer-btn.is-selected::before {
   border: 6px solid var(--accent);
