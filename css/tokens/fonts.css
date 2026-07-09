@@ -1,0 +1,8 @@
+/* ABC — Fonts
+   Quicksand via Google Fonts. This is the brand's specified family and is
+   freely available on Google Fonts, so we load it from the Google CDN.
+   NOTE TO MAINTAINERS: for a fully self-hosted design system, download the
+   Quicksand woff2 files and replace the @import below with local @font-face
+   rules. */
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");

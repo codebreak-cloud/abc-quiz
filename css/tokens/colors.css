@@ -1,0 +1,71 @@
+/* ABC — Colors
+   Brand palette: bright, energetic, supportive.
+   Base brand values from the ABC Quiz brief, extended with tints/shades
+   so the same three hues can carry backgrounds, borders and states. */
+
+:root {
+  /* ---- Brand base ---- */
+  --purple: #845aa6;      /* Primary accent */
+  --yellow: #fdb913;      /* Secondary accent */
+  --green:  #8d9f38;      /* Tertiary accent */
+
+  /* ---- Purple ramp ---- */
+  --purple-900: #3d2a4f;
+  --purple-700: #5f3f78;
+  --purple-600: #845aa6;  /* = --purple */
+  --purple-400: #a884c4;
+  --purple-200: #d8c7e6;
+  --purple-100: #ece3f4;
+  --purple-050: #f6f1fa;
+
+  /* ---- Yellow ramp ---- */
+  --yellow-700: #c68e00;
+  --yellow-500: #fdb913;  /* = --yellow */
+  --yellow-300: #ffd45f;
+  --yellow-100: #fff1c9;
+  --yellow-050: #fffaeb;
+
+  /* ---- Green ramp ---- */
+  --green-700: #5f6c23;
+  --green-500: #8d9f38;   /* = --green */
+  --green-300: #b6c471;
+  --green-100: #e5ebc9;
+  --green-050: #f4f7e6;
+
+  /* ---- Neutrals ---- */
+  --ink-900: #2b2b2b;
+  --ink-700: #444444;     /* Body text from brief */
+  --ink-500: #6b6b6b;
+  --ink-300: #a3a3a3;
+  --ink-100: #e4e4e4;
+  --paper:   #ffffff;
+  --paper-warm: #fdfbf7;  /* Off-white page background */
+
+  /* ---- Semantic aliases ---- */
+  --brand:            var(--purple-600);
+  --brand-strong:     var(--purple-700);
+  --accent:           var(--yellow-500);
+  --accent-soft:      var(--yellow-100);
+  --support:          var(--green-500);
+
+  --text-heading:     var(--purple-900);
+  --text-body:        var(--ink-700);
+  --text-muted:       var(--ink-500);
+  --text-on-brand:    #ffffff;
+  --text-on-accent:   var(--purple-900);
+
+  --surface-page:     var(--paper-warm);
+  --surface-card:     var(--paper);
+  --surface-tint:     var(--purple-050);
+  --surface-accent:   var(--yellow-050);
+
+  --border-soft:      var(--ink-100);
+  --border-brand:     var(--purple-200);
+
+  --focus-ring:       var(--purple-400);
+
+  /* Score-band semantic colors */
+  --band-light:       var(--green-500);
+  --band-firm:        var(--yellow-500);
+  --band-deep:        var(--purple-600);
+}
