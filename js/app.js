@@ -116,12 +116,10 @@
       textarea.rows = 3;
       textarea.addEventListener("input", () => {
         nextBtn.disabled = textarea.value.trim().length === 0;
-        if (window.__abcDebug) window.__abcDebug("textarea input, length=" + textarea.value.trim().length + ", nextBtn.disabled=" + nextBtn.disabled);
       });
       card.appendChild(textarea);
 
       nextBtn.onclick = () => {
-        if (window.__abcDebug) window.__abcDebug("nextBtn clicked, isTransitioning=" + isTransitioning + ", coaster=" + (coaster ? "set" : "NULL"));
         state.answers.q8 = textarea.value.trim();
         advancePastFreeText();
       };
@@ -159,18 +157,12 @@
   }
 
   function advancePastFreeText() {
-    if (window.__abcDebug) window.__abcDebug("advancePastFreeText() called, isTransitioning=" + isTransitioning);
-    if (isTransitioning) {
-      if (window.__abcDebug) window.__abcDebug("BLOCKED: isTransitioning was already true, returning early");
-      return;
-    }
+    if (isTransitioning) return;
     isTransitioning = true;
     coaster.setProgress(1).then(() => {
-      if (window.__abcDebug) window.__abcDebug("coaster.setProgress(1) resolved, switching to view-capture");
       setTimeout(() => {
         showView("view-capture");
         isTransitioning = false;
-        if (window.__abcDebug) window.__abcDebug("view-capture should now be active");
       }, 250);
     });
   }

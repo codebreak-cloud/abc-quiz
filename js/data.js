@@ -90,7 +90,7 @@ const QUESTIONS = [
     prompt: "Which sentence stings the most?",
     answers: [
       { trap: "IH", text: '"So much potential, so many unfinished projects"' },
-      { trap: "BB", text: '"Where did you disappear to?"' },
+      { trap: "BB", text: '"Where did you disappear to"' },
       { trap: "LMW", text: '"You always leave it until the last minute"' },
     ],
   },
@@ -102,7 +102,7 @@ const QUESTIONS = [
     answers: [
       { points: 20, text: "Most weeks, give or take" },
       { points: 40, text: "About half the time" },
-      { points: 60, text: "There was a plan?" },
+      { points: 60, text: "There was a plan" },
     ],
   },
   {
