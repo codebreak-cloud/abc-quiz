@@ -90,7 +90,7 @@ const QUESTIONS = [
     prompt: "Which sentence stings the most?",
     answers: [
       { trap: "IH", text: '"So much potential, so many unfinished projects"' },
-      { trap: "BB", text: '"Where did you disappear to"' },
+      { trap: "BB", text: '"Where did you disappear to?"' },
       { trap: "LMW", text: '"You always leave it until the last minute"' },
     ],
   },
