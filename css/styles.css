@@ -330,7 +330,7 @@ body { overflow-x: hidden; }
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: var(--surface-page);
+  background: linear-gradient(180deg, var(--purple-050) 0%, var(--surface-page) 55%);
   padding: 1.5rem 0 3rem;
 }
 .quiz-shell > .container { position: relative; z-index: 1; }
@@ -349,10 +349,11 @@ body { overflow-x: hidden; }
   content: "";
   position: absolute;
   inset: -20%;
+  opacity: 0.5;
   background:
-    radial-gradient(circle at 25% 20%, var(--purple-100) 0%, transparent 45%),
-    radial-gradient(circle at 80% 30%, var(--purple-050) 0%, transparent 45%),
-    radial-gradient(circle at 50% 90%, var(--purple-200) 0%, transparent 50%);
+    radial-gradient(circle at 25% 20%, var(--purple-100) 0%, var(--surface-page) 45%),
+    radial-gradient(circle at 80% 30%, var(--purple-050) 0%, var(--surface-page) 45%),
+    radial-gradient(circle at 50% 90%, var(--purple-100) 0%, var(--surface-page) 50%);
   animation: quiz-bg-drift 26s ease-in-out infinite alternate;
 }
 .quiz-bg__circle {
