@@ -349,9 +349,11 @@ body { overflow-x: hidden; }
   content: "";
   position: absolute;
   inset: -20%;
+  /* #fdead9 is a soft peach/orange wash — not part of the official
+     token ramp (which has no orange), added just for this fade. */
   background:
     radial-gradient(circle at 25% 20%, var(--purple-050) 0%, transparent 45%),
-    radial-gradient(circle at 80% 30%, var(--green-050) 0%, transparent 45%),
+    radial-gradient(circle at 80% 30%, #fdead9 0%, transparent 45%),
     radial-gradient(circle at 50% 90%, var(--yellow-050) 0%, transparent 50%);
   animation: quiz-bg-drift 26s ease-in-out infinite alternate;
 }
