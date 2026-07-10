@@ -360,21 +360,19 @@ body { overflow-x: hidden; }
   position: absolute;
   border-radius: 50%;
   opacity: 0.7;
-  animation: quiz-bg-float 12s ease-in-out infinite;
+  animation: quiz-bg-drift-across 30s ease-in-out infinite alternate;
 }
-.quiz-bg__circle--1 { top: 15%; left: 10%; width: 46px; height: 46px; background: var(--purple-200); animation-duration: 13s; }
-.quiz-bg__circle--2 { top: 82%; left: 14%; width: 28px; height: 28px; background: var(--green-300); animation-duration: 9s; animation-delay: -3s; }
-.quiz-bg__circle--3 { top: 18%; left: 88%; width: 36px; height: 36px; background: var(--yellow-300); animation-duration: 14s; animation-delay: -7s; }
-.quiz-bg__circle--4 { top: 85%; left: 84%; width: 22px; height: 22px; background: var(--purple-200); animation-duration: 10s; animation-delay: -10s; }
-.quiz-bg__circle--5 { top: 48%; left: 35%; width: 32px; height: 32px; background: var(--green-300); animation-duration: 15s; animation-delay: -13s; }
-.quiz-bg__circle--6 { top: 55%; left: 65%; width: 18px; height: 18px; background: var(--yellow-300); animation-duration: 11s; animation-delay: -5s; }
+.quiz-bg__circle--1 { top: 15%; left: 10%; width: 46px; height: 46px; background: var(--purple-200); --dx: 55vw; --dy: 8vh; animation-duration: 32s; }
+.quiz-bg__circle--2 { top: 82%; left: 14%; width: 28px; height: 28px; background: var(--green-300); --dx: 50vw; --dy: -10vh; animation-duration: 26s; animation-delay: -3s; }
+.quiz-bg__circle--3 { top: 18%; left: 88%; width: 36px; height: 36px; background: var(--yellow-300); --dx: -55vw; --dy: 10vh; animation-duration: 34s; animation-delay: -7s; }
+.quiz-bg__circle--4 { top: 85%; left: 84%; width: 22px; height: 22px; background: var(--purple-200); --dx: -50vw; --dy: -12vh; animation-duration: 24s; animation-delay: -10s; }
+.quiz-bg__circle--5 { top: 48%; left: 35%; width: 32px; height: 32px; background: var(--green-300); --dx: 40vw; --dy: -6vh; animation-duration: 29s; animation-delay: -13s; }
+.quiz-bg__circle--6 { top: 55%; left: 65%; width: 18px; height: 18px; background: var(--yellow-300); --dx: -40vw; --dy: 6vh; animation-duration: 22s; animation-delay: -5s; }
 
-@keyframes quiz-bg-float {
+@keyframes quiz-bg-drift-across {
   0%   { transform: translate(0, 0) scale(1); }
-  25%  { transform: translate(-32px, -38px) scale(1.15); }
-  50%  { transform: translate(38px, -58px) scale(1.35); }
-  75%  { transform: translate(26px, 20px) scale(1.1); }
-  100% { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(calc(var(--dx) * 0.5), calc(var(--dy) * 0.5)) scale(1.2); }
+  100% { transform: translate(var(--dx), var(--dy)) scale(1); }
 }
 @keyframes quiz-bg-drift {
   0% { transform: translate(0, 0); }
