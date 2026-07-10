@@ -102,7 +102,7 @@ const QUESTIONS = [
     answers: [
       { points: 20, text: "Most weeks, give or take" },
       { points: 40, text: "About half the time" },
-      { points: 60, text: "There was a plan" },
+      { points: 60, text: "There was a plan?" },
     ],
   },
   {
