@@ -330,31 +330,20 @@ body { overflow-x: hidden; }
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(180deg, var(--purple-050) 0%, var(--surface-page) 55%);
+  background: var(--surface-page);
   padding: 1.5rem 0 3rem;
 }
 .quiz-shell > .container { position: relative; z-index: 1; }
 
-/* Subtle ambient background — floating tinted circles + a slow
-   drifting gradient wash, kept low-opacity so it stays out of the
-   way of reading the question and picking an answer. */
+/* Subtle ambient background — floating tinted circles on a clean,
+   neutral page background so the brand colors in the circles pop
+   instead of competing with a tinted canvas. */
 .quiz-bg {
   position: fixed;
   inset: 0;
   overflow: hidden;
   z-index: 0;
   pointer-events: none;
-}
-.quiz-bg::before {
-  content: "";
-  position: absolute;
-  inset: -20%;
-  opacity: 0.5;
-  background:
-    radial-gradient(circle at 25% 20%, var(--purple-100) 0%, var(--surface-page) 45%),
-    radial-gradient(circle at 80% 30%, var(--purple-050) 0%, var(--surface-page) 45%),
-    radial-gradient(circle at 50% 90%, var(--purple-100) 0%, var(--surface-page) 50%);
-  animation: quiz-bg-drift 26s ease-in-out infinite alternate;
 }
 .quiz-bg__circle {
   position: absolute;
@@ -377,10 +366,6 @@ body { overflow-x: hidden; }
   0%   { transform: translate(0, 0) scale(1); }
   50%  { transform: translate(calc(var(--dx) * 0.5), calc(var(--dy) * 0.5)) scale(1.2); }
   100% { transform: translate(var(--dx), var(--dy)) scale(1); }
-}
-@keyframes quiz-bg-drift {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(4%, 3%); }
 }
 
 .quiz-topbar__meta {
