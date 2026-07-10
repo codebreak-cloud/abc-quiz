@@ -51,7 +51,7 @@ const QUESTIONS = [
     answers: [
       { trap: "IH", text: "Roughly 400 business ideas, three half written offers and a name for a podcast that doesn't exist" },
       { trap: "BB", text: "Bursts of beautifully detailed plans, dated months apart, with nothing in between" },
-      { trap: "LMW", text: "The same to do list copied forward week after week, with the same scary item at the top" },
+      { trap: "LMW", text: "The same to-do-list copied forward week after week, with the same scary item at the top" },
     ],
   },
   {
