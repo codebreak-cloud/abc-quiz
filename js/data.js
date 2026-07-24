@@ -141,7 +141,7 @@ const RESULTS_CONTENT = {
       "Not another productivity app, {{firstName}}. Not trying harder. What works for brains like yours is external structure: somewhere to take the ideas so a decision gets made, and something that holds you to the one you chose.",
     bridgeHeading: "That's precisely what the ADHD Business Collective is built for.",
     bridgeBody:
-      "Inside the ABC, the monthly Focus Strategy Call gets your ideas out of your head and into a one page plan with one main focus for the month ahead. The monthly Hotseat is where you bring the \"which idea do I actually run with\" question and get it answered by Kim and a room of women whose brains work like yours. Then the weekly body doubling sprints are where the chosen idea actually gets built, week after week, until it's done.",
+      "Inside the ABC, the monthly Focus Strategy Call gets your ideas out of your head and into a one page plan with one main focus for the month ahead. The monthly Hotseat is where you bring the \"which idea do I actually run with\" question and get it answered by Kim and a room of business owners whose brains work like yours. Then the weekly body doubling sprints are where the chosen idea actually gets built, week after week, until it's done.",
     bridgeStrap: "Pick. Plan. Finish. With people who get it.",
     closing: "Imagine opening your laptop in a month's time, {{firstName}}, and <strong>{{freeText}}</strong> is done.",
     ctaText: "Yes, I Want To Finally Finish Something",
@@ -163,7 +163,7 @@ const RESULTS_CONTENT = {
       "You will never willpower your way to consistency, {{firstName}}. The fix is borrowing structure: regular, scheduled, external rhythm that keeps things moving even in your flat weeks, so a dip never becomes a derailment.",
     bridgeHeading: "That's exactly what the ADHD Business Collective gives you.",
     bridgeBody:
-      "The week has a shape inside the ABC. Body doubling sprints every Monday and Wednesday where you get the needle moving tasks done alongside other women doing the same. Friday sessions that pull you back to the plan. And when the flat weeks come, and they will, the community carries the rhythm until you're back. Kim's expert trainings even include End The Revenue Rollercoaster, because this trap is that common among ADHD business owners.",
+      "The week has a shape inside the ABC. Body doubling sprints every Monday and Wednesday where you get the needle moving tasks done alongside other business owners doing the same. Friday sessions that pull you back to the plan. And when the flat weeks come, and they will, the community carries the rhythm until you're back. Kim's expert trainings even include End The Revenue Rollercoaster, because this trap is that common among ADHD business owners.",
     bridgeStrap: "",
     closing: "Steady, without pretending your brain is something it isn't. Picture <strong>{{freeText}}</strong> actually happening every week, {{firstName}}, even the flat ones.",
     ctaText: "Yes, I Want Off The Rollercoaster",
@@ -185,7 +185,7 @@ const RESULTS_CONTENT = {
       "You can't remove your brain's need for urgency, but you can change where the urgency comes from. Scheduled sessions, real people expecting you, small deadlines all the way through the month instead of one terrifying one at the end. Pressure in small, regular doses instead of one big blowout.",
     bridgeHeading: "That's what the ADHD Business Collective is designed around.",
     bridgeBody:
-      "Body doubling sprints on Mondays and Wednesdays give you a start time, an end time and a room full of women getting their heads down with you. That's urgency, twice a week, in a dose that doesn't flatten you. The Friday planning and strategy sessions break the big scary things into pieces you can actually start early. And Kim's trainings include Bouncing Back From Burnout and Regulating Your ADHD Nervous System, because she has lived this trap too.",
+      "Body doubling sprints on Mondays and Wednesdays give you a start time, an end time and a room full of business owners getting their heads down with you. That's urgency, twice a week, in a dose that doesn't flatten you. The Friday planning and strategy sessions break the big scary things into pieces you can actually start early. And Kim's trainings include Bouncing Back From Burnout and Regulating Your ADHD Nervous System, because she has lived this trap too.",
     bridgeStrap: "",
     closing: "Get things done before the panic, and still have something left afterwards. That includes <strong>{{freeText}}</strong>, {{firstName}}, done calmly and early for once.",
     ctaText: "Yes, I Want To Stop Running On Empty",
