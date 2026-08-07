@@ -190,8 +190,9 @@ const RESULTS_CONTENT = {
 };
 
 // £1-for-30-days trial offer. Card is captured at signup but not charged;
-// whichever plan is selected below is what auto-charges after day 30 unless
-// cancelled first. Same CTA/price/guarantee across all three traps now, so
+// monthly vs. annual is chosen on the GHL checkout page this button leads
+// to, not here, so pricing for each plan lives in that checkout, not in
+// this codebase. Same CTA/price/guarantee across all three traps now, so
 // it lives here rather than per-trap in RESULTS_CONTENT.
 const OFFER = {
   ctaText: "Yes, Start My £1 Month",
@@ -200,14 +201,8 @@ const OFFER = {
   //   "Try It For £1"
   price: "Just £1 for your first month",
   guarantee:
-    "We'll ask for your card details to activate your £1 trial, but you won't be charged the full plan price today. If you cancel any time in the next 30 days, you'll never be charged a penny more. If you don't, your card is automatically charged for the plan you picked above, and you carry straight on.",
+    "We'll ask for your card details to activate your £1 trial, but you won't be charged the full plan price today. You'll choose monthly or annual on the next step. Cancel any time in the next 30 days and you'll never be charged a penny more. If you don't, your card is automatically charged for the plan you picked, and you carry straight on.",
   joinUrl: "#join-abc-placeholder",
-  plans: {
-    monthly: { label: "Monthly", priceLine: "£57/month after your £1 trial" },
-    // PLACEHOLDER — annual price and saving amount unconfirmed, swap [X]/[Y]
-    // once Kim/Claire confirm before go-live.
-    annual: { label: "Annual", priceLine: "£[X]/year after your £1 trial (save £[Y])" },
-  },
 };
 
 // PLACEHOLDER — real webhook endpoint to be created later (ActiveCampaign).

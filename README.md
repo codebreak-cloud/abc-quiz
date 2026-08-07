@@ -74,13 +74,12 @@ Search the code for `PLACEHOLDER` to find these:
    create the ActiveCampaign webhook automation and drop the URL in, lead
    submissions just log to the browser console (see `js/webhook.js`) instead
    of failing silently.
-2. **`js/data.js` → `OFFER`** — the £1-trial mechanic is built (plan selector,
-   card-not-charged-today copy, auto-charge-after-30-days terms), but
-   `plans.annual.priceLine` still has `£[X]`/`£[Y]` placeholders for the
-   annual price and saving amount, and `joinUrl` (`#join-abc-placeholder`)
-   needs the real checkout link. Swap once confirmed. The selected plan
-   (`monthly`/`annual`) is passed to `joinUrl` as a `?plan=` query param for
-   whatever checkout flow replaces the placeholder.
+2. **`js/data.js` → `OFFER`** — the £1-trial copy is built (card-not-charged-
+   today line, auto-charge-after-30-days terms). Monthly vs. annual is
+   chosen on the GHL checkout page this button leads to, not on this
+   results page, so that pricing lives in the checkout, not here.
+   `joinUrl` (`#join-abc-placeholder`) still needs the real checkout link —
+   swap once confirmed.
 3. **Landing page testimonials** (`index.html`, "What ADHD Business Owners
    Say" section) — bracketed placeholder quotes, swap for real ones.
 4. **Hero image** — spec called for `[HERO IMAGE]`; built a simple custom SVG
