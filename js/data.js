@@ -183,7 +183,7 @@ const RESULTS_CONTENT = {
       "You can't remove your brain's need for urgency, but you can change where the urgency comes from. Scheduled sessions, real people expecting you, small deadlines all the way through the month instead of one terrifying one at the end. Pressure in small, regular doses instead of one big blowout.",
     bridgeHeading: "That's what the ADHD Business Collective is designed around.",
     bridgeBody:
-      "Body doubling sprints on Mondays and Wednesdays give you a start time, an end time and a room full of business owners getting their heads down with you. That's urgency, twice a week, in a dose that doesn't flatten you. The Friday planning and strategy sessions break the big scary things into pieces you can actually start early. And Kim's trainings include Bouncing Back From Burnout and Regulating Your ADHD Nervous System, because she has lived this trap too.",
+      "Body doubling sprints on Mondays and Wednesdays give you a start time, an end time and a room full of business owners getting their heads down with you. That's urgency, twice a week, in a dose that doesn't flatten you. The Friday planning and strategy sessions break the big scary things into pieces you can actually start early. And Kim's trainings include Bouncing Back From Burnout and Regulating Your ADHD Nervous System, because Kim has lived this trap too.",
     bridgeStrap: "",
     closing: "Get things done before the panic, and still have something left afterwards. That includes <strong>{{freeText}}</strong>, {{firstName}}, done calmly and early for once.",
   },
