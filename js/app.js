@@ -175,6 +175,7 @@
 
       const nameInput = document.getElementById("capture-name");
       const emailInput = document.getElementById("capture-email");
+      const consentInput = document.getElementById("capture-consent");
       const nameError = document.getElementById("capture-name-error");
       const emailError = document.getElementById("capture-email-error");
       nameError.textContent = "";
@@ -191,6 +192,10 @@
       }
       if (!emailOk) {
         emailError.textContent = "That doesn't look like a valid email.";
+        valid = false;
+      }
+      if (!consentInput.checked) {
+        alert("Please read and agree to our Privacy Policy to continue.");
         valid = false;
       }
       if (!valid) return;
