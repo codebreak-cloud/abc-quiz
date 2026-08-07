@@ -204,6 +204,15 @@
     });
   }
 
+  /* ---------------- plan select (Monthly / Annual) ---------------- */
+  function updatePlanSelection() {
+    const radios = document.querySelectorAll('input[name="plan"]');
+    const selected = document.querySelector('input[name="plan"]:checked');
+    const plan = selected ? selected.value : "annual";
+    document.getElementById("result-cta-btn").href = OFFER.joinUrl + "?plan=" + plan;
+    radios.forEach((r) => r.closest(".plan-option").classList.toggle("is-selected", r.checked));
+  }
+
   /* ---------------- scoring + results ---------------- */
   function showResult() {
     const result = calculateResult(state.answers, SCORE_BANDS);
@@ -241,10 +250,12 @@
 
     document.getElementById("result-closing").innerHTML = substitute(content.closing, vars);
 
-    document.getElementById("result-cta-btn").textContent = content.ctaText;
-    document.getElementById("result-cta-btn").href = OFFER.joinUrl;
+    document.getElementById("result-cta-btn").textContent = OFFER.ctaText;
     document.getElementById("result-price").textContent = OFFER.price;
     document.getElementById("result-guarantee").textContent = OFFER.guarantee;
+    document.getElementById("plan-monthly-line").textContent = OFFER.plans.monthly.priceLine;
+    document.getElementById("plan-annual-line").textContent = OFFER.plans.annual.priceLine;
+    updatePlanSelection();
 
     showView("view-results");
 
@@ -290,6 +301,9 @@
       btn.addEventListener("click", startQuiz);
     });
     document.getElementById("header-exit-btn").addEventListener("click", exitQuiz);
+    document.querySelectorAll('input[name="plan"]').forEach((r) => {
+      r.addEventListener("change", updatePlanSelection);
+    });
     setupCaptureForm();
     initHeroCart();
   });

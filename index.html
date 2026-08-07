@@ -303,6 +303,17 @@
       <p class="closing-line" id="result-closing" style="margin-top: 2.5rem;"></p>
 
       <section class="cta-block">
+        <div class="plan-select" id="plan-select">
+          <p class="plan-select__label">Choose your plan (you won't be charged today)</p>
+          <label class="plan-option">
+            <input type="radio" name="plan" value="monthly" />
+            <span class="plan-option__text">Monthly — <span id="plan-monthly-line"></span></span>
+          </label>
+          <label class="plan-option">
+            <input type="radio" name="plan" value="annual" checked />
+            <span class="plan-option__text">Annual — <span id="plan-annual-line"></span></span>
+          </label>
+        </div>
         <a href="#" id="result-cta-btn" class="btn btn-accent btn-lg" target="_blank" rel="noopener">CTA</a>
         <p class="price" id="result-price"></p>
         <p class="guarantee" id="result-guarantee"></p>

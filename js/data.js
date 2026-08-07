@@ -144,7 +144,6 @@ const RESULTS_CONTENT = {
       "Inside the ABC, the monthly Focus Strategy Call gets your ideas out of your head and into a one page plan with one main focus for the month ahead. The monthly Hotseat is where you bring the \"which idea do I actually run with\" question and get it answered by Kim and a room of business owners whose brains work like yours. Then the weekly body doubling sprints are where the chosen idea actually gets built, week after week, until it's done.",
     bridgeStrap: "Pick. Plan. Finish. With people who get it.",
     closing: "Imagine opening your laptop in a month's time, {{firstName}}, and <strong>{{freeText}}</strong> is done.",
-    ctaText: "Yes, I Want To Finally Finish Something",
   },
   BB: {
     trapName: "Boom and Bust",
@@ -166,7 +165,6 @@ const RESULTS_CONTENT = {
       "The week has a shape inside the ABC. Body doubling sprints every Monday and Wednesday where you get the needle moving tasks done alongside other business owners doing the same. Friday sessions that pull you back to the plan. And when the flat weeks come, and they will, the community carries the rhythm until you're back. Kim's expert trainings even include End The Revenue Rollercoaster, because this trap is that common among ADHD business owners.",
     bridgeStrap: "",
     closing: "Steady, without pretending your brain is something it isn't. Picture <strong>{{freeText}}</strong> actually happening every week, {{firstName}}, even the flat ones.",
-    ctaText: "Yes, I Want Off The Rollercoaster",
   },
   LMW: {
     trapName: "Last-Minute Wrecker",
@@ -188,17 +186,28 @@ const RESULTS_CONTENT = {
       "Body doubling sprints on Mondays and Wednesdays give you a start time, an end time and a room full of business owners getting their heads down with you. That's urgency, twice a week, in a dose that doesn't flatten you. The Friday planning and strategy sessions break the big scary things into pieces you can actually start early. And Kim's trainings include Bouncing Back From Burnout and Regulating Your ADHD Nervous System, because she has lived this trap too.",
     bridgeStrap: "",
     closing: "Get things done before the panic, and still have something left afterwards. That includes <strong>{{freeText}}</strong>, {{firstName}}, done calmly and early for once.",
-    ctaText: "Yes, I Want To Stop Running On Empty",
   },
 };
 
-// PLACEHOLDER — pricing/offer/join link/guarantee unconfirmed per spec "Open questions".
-// Swap these once Kim/Claire confirm final pricing, joining offer, and the live GHL join link.
+// £1-for-30-days trial offer. Card is captured at signup but not charged;
+// whichever plan is selected below is what auto-charges after day 30 unless
+// cancelled first. Same CTA/price/guarantee across all three traps now, so
+// it lives here rather than per-trap in RESULTS_CONTENT.
 const OFFER = {
-  price: "£57 a month",
+  ctaText: "Yes, Start My £1 Month",
+  // Alternates for Kim/Claire to swap in instead, if preferred:
+  //   "Get Off The Rollercoaster For £1"
+  //   "Try It For £1"
+  price: "Just £1 for your first month",
   guarantee:
-    "30 day money back guarantee, so if it doesn't move your business forward in the first month, you get every penny back.",
+    "We'll ask for your card details to activate your £1 trial, but you won't be charged the full plan price today. If you cancel any time in the next 30 days, you'll never be charged a penny more. If you don't, your card is automatically charged for the plan you picked above, and you carry straight on.",
   joinUrl: "#join-abc-placeholder",
+  plans: {
+    monthly: { label: "Monthly", priceLine: "£57/month after your £1 trial" },
+    // PLACEHOLDER — annual price and saving amount unconfirmed, swap [X]/[Y]
+    // once Kim/Claire confirm before go-live.
+    annual: { label: "Annual", priceLine: "£[X]/year after your £1 trial (save £[Y])" },
+  },
 };
 
 // PLACEHOLDER — real webhook endpoint to be created later (ActiveCampaign).

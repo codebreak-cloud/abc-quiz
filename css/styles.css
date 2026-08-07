@@ -699,6 +699,36 @@ body { overflow-x: hidden; }
   margin: 0.35rem auto 0;
 }
 
+.plan-select {
+  max-width: 420px;
+  margin: 0 auto 1.5rem;
+  text-align: left;
+}
+.plan-select__label {
+  font-size: var(--text-small);
+  font-weight: var(--fw-semibold);
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+.plan-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border: 2px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.plan-option:hover { border-color: var(--border-brand); }
+.plan-option input { margin-top: 3px; accent-color: var(--brand); }
+.plan-option__text { font-size: var(--text-body); color: var(--text-heading); }
+.plan-option.is-selected {
+  border-color: var(--brand);
+  background: var(--surface-tint);
+}
+
 .retake-row {
   text-align: center;
   margin-top: 2.5rem;
