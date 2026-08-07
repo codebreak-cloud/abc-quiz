@@ -80,9 +80,13 @@ Search the code for `PLACEHOLDER` to find these:
    results page, so that pricing lives in the checkout, not here.
    `joinUrl` (`#join-abc-placeholder`) still needs the real checkout link —
    swap once confirmed.
-3. **Landing page testimonials** (`index.html`, "What ADHD Business Owners
+3. **`js/consent.js` → `FACEBOOK_PIXEL_ID`** — placeholder string. Replace
+   with your real Facebook Pixel ID. Cookie consent is GDPR-compliant: users
+   see a banner on page load, and Facebook Pixel only loads if they click
+   "Accept". Events tracked: form submission (Lead), CTA click (ViewContent).
+4. **Landing page testimonials** (`index.html`, "What ADHD Business Owners
    Say" section) — bracketed placeholder quotes, swap for real ones.
-4. **Hero image** — spec called for `[HERO IMAGE]`; built a simple custom SVG
+5. **Hero image** — spec called for `[HERO IMAGE]`; built a simple custom SVG
    illustration instead since no image asset was supplied.
 
 ## Scoring, as implemented

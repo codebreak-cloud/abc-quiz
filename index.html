@@ -10,6 +10,23 @@
 <body>
 
 <!-- ============================================================
+     COOKIE CONSENT BANNER (GDPR-compliant)
+     ============================================================ -->
+<div id="cookie-banner" class="cookie-banner is-visible" role="banner" aria-label="Cookie consent">
+  <div class="cookie-banner__content">
+    <p class="cookie-banner__text">
+      We use Facebook Pixel to track form submissions and understand how you use this quiz.
+      <a href="https://kimraine.com/privacy-policy-2/" target="_blank" rel="noopener">See our Privacy Policy</a>
+      to learn more about how we handle your data.
+    </p>
+    <div class="cookie-banner__buttons">
+      <button id="cookie-reject" class="btn btn-ghost btn-sm">Reject</button>
+      <button id="cookie-accept" class="btn btn-primary btn-sm">Accept</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
      SVG SYMBOL DEFS (reused across views)
      ============================================================ -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -320,6 +337,7 @@
 </div>
 
 <script src="js/data.js"></script>
+<script src="js/consent.js"></script>
 <script src="js/scoring.js"></script>
 <script src="js/animations.js"></script>
 <script src="js/webhook.js"></script>

@@ -215,6 +215,11 @@
     const content = RESULTS_CONTENT[result.trap];
     const vars = { firstName: state.firstName, score: result.score, freeText: result.freeText };
 
+    // Track form submission (quiz completion) to Facebook Pixel
+    if (typeof trackFormSubmission === "function") {
+      trackFormSubmission(state.firstName, content.trapName, result.score);
+    }
+
     document.getElementById("result-headline").textContent = substitutePlain(content.headline, vars);
     document.getElementById("result-score-line").innerHTML =
       "You scored <strong>" + result.score + " out of 100</strong>.";
@@ -249,6 +254,11 @@
     document.getElementById("result-bridge-cta").textContent = OFFER.bridgeCta;
     document.getElementById("result-cta-btn").textContent = OFFER.ctaText;
     document.getElementById("result-cta-btn").href = OFFER.joinUrl;
+    document.getElementById("result-cta-btn").addEventListener("click", () => {
+      if (typeof trackCTAClick === "function") {
+        trackCTAClick(content.trapName);
+      }
+    });
     document.getElementById("result-guarantee").textContent = OFFER.guarantee;
 
     showView("view-results");
