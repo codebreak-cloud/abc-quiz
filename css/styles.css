@@ -67,15 +67,41 @@ body { overflow-x: hidden; }
   color: var(--brand);
   text-decoration: underline;
 }
+.cookie-banner__checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+  min-width: 300px;
+}
+.cookie-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+.cookie-checkbox input {
+  margin-top: 4px;
+  accent-color: var(--brand);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.cookie-checkbox__label {
+  font-size: var(--text-body);
+}
+
 .cookie-banner__buttons {
   display: flex;
   gap: 0.75rem;
   white-space: nowrap;
 }
-@media (max-width: 640px) {
+@media (max-width: 840px) {
   .cookie-banner__content {
     flex-direction: column;
     align-items: stretch;
+  }
+  .cookie-banner__checkboxes {
+    min-width: unset;
   }
   .cookie-banner__buttons {
     width: 100%;
