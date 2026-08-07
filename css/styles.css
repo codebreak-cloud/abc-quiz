@@ -688,9 +688,11 @@ body { overflow-x: hidden; }
 }
 
 .cta-block { text-align: center; margin-top: 2.5rem; padding-bottom: 3rem; }
-.cta-block .price {
-  font-weight: var(--fw-bold);
-  margin-top: 1rem;
+.cta-block .bridge-cta {
+  max-width: 500px;
+  margin: 0 auto 1.5rem;
+  font-size: var(--text-body);
+  line-height: var(--lh-normal);
 }
 .cta-block .guarantee {
   font-size: var(--text-small);

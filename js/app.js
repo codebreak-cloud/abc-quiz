@@ -241,9 +241,9 @@
 
     document.getElementById("result-closing").innerHTML = substitute(content.closing, vars);
 
+    document.getElementById("result-bridge-cta").textContent = OFFER.bridgeCta;
     document.getElementById("result-cta-btn").textContent = OFFER.ctaText;
     document.getElementById("result-cta-btn").href = OFFER.joinUrl;
-    document.getElementById("result-price").textContent = OFFER.price;
     document.getElementById("result-guarantee").textContent = OFFER.guarantee;
 
     showView("view-results");
