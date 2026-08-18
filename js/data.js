@@ -206,9 +206,10 @@ const OFFER = {
   joinUrl: "#join-abc-placeholder",
 };
 
-// Webhook endpoint for lead capture and quiz results
+// Webhook endpoints
 const ACTIVE_CAMPAIGN_WEBHOOK_URL = "https://ai.codebreak.co.uk/api/webhook/9d605dfd-d013-4cb1-bb64-8cb29c3f4a92/fd99e076-2057-4110-85fa-90665e356a2b";
+const ZAPIER_WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/10069339/4t1isrp/";
 
 if (typeof module !== "undefined") {
-  module.exports = { TRAPS, QUESTIONS, SCORE_BANDS, RESULTS_CONTENT, OFFER, ACTIVE_CAMPAIGN_WEBHOOK_URL };
+  module.exports = { TRAPS, QUESTIONS, SCORE_BANDS, RESULTS_CONTENT, OFFER, ACTIVE_CAMPAIGN_WEBHOOK_URL, ZAPIER_WEBHOOK_URL };
 }
