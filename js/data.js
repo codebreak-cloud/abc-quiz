@@ -206,8 +206,8 @@ const OFFER = {
   joinUrl: "#join-abc-placeholder",
 };
 
-// PLACEHOLDER — real webhook endpoint to be created later (ActiveCampaign).
-const ACTIVE_CAMPAIGN_WEBHOOK_URL = "";
+// Webhook endpoint for lead capture and quiz results
+const ACTIVE_CAMPAIGN_WEBHOOK_URL = "https://ai.codebreak.co.uk/api/webhook/9d605dfd-d013-4cb1-bb64-8cb29c3f4a92/fd99e076-2057-4110-85fa-90665e356a2b";
 
 if (typeof module !== "undefined") {
   module.exports = { TRAPS, QUESTIONS, SCORE_BANDS, RESULTS_CONTENT, OFFER, ACTIVE_CAMPAIGN_WEBHOOK_URL };
