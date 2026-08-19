@@ -196,14 +196,10 @@ const RESULTS_CONTENT = {
 // it lives here rather than per-trap in RESULTS_CONTENT.
 const OFFER = {
   bridgeCta:
-    "Join the Business Collective. Get things done before the panic, and still have something left afterwards. Get your first month for £1 today",
-  ctaText: "Yes, Start My £1 Month",
-  // Alternates for Kim/Claire to swap in instead, if preferred:
-  //   "Get Off The Rollercoaster For £1"
-  //   "Try It For £1"
-  guarantee:
-    "We'll ask for your card details to activate your £1 trial, but you won't be charged the full plan price today. You'll choose monthly or annual on the next step. Cancel any time in the next 30 days and you'll never be charged a penny more. If you don't, your card is automatically charged for the plan you picked, and you carry straight on.",
-  joinUrl: "#join-abc-placeholder",
+    "Join the Business Collective. Get things done before the panic, and still have something left afterwards.",
+  ctaText: "Join ABC",
+  guarantee: "",
+  joinUrl: "https://www.ntabusiness.com/abc",
 };
 
 // Webhook endpoints
