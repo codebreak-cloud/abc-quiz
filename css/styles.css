@@ -774,8 +774,9 @@ body { overflow-x: hidden; }
 .cta-block .bridge-cta {
   max-width: 500px;
   margin: 0 auto 1.5rem;
-  font-size: var(--text-body);
-  line-height: var(--lh-normal);
+  font-size: var(--text-lead);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-snug);
 }
 .cta-block .guarantee {
   font-size: var(--text-small);
