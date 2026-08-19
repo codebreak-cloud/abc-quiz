@@ -206,9 +206,10 @@ const OFFER = {
   joinUrl: "#join-abc-placeholder",
 };
 
-// Webhook endpoint for lead capture and quiz results
+// Webhook endpoints
 const ACTIVE_CAMPAIGN_WEBHOOK_URL = "https://ai.codebreak.co.uk/api/webhook/9d605dfd-d013-4cb1-bb64-8cb29c3f4a92/fd99e076-2057-4110-85fa-90665e356a2b";
+const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/BIA9Hm7IvqMz9li0dSX7/webhook-trigger/595a8ee4-f026-4f6b-bee7-f055181831f2";
 
 if (typeof module !== "undefined") {
-  module.exports = { TRAPS, QUESTIONS, SCORE_BANDS, RESULTS_CONTENT, OFFER, ACTIVE_CAMPAIGN_WEBHOOK_URL };
+  module.exports = { TRAPS, QUESTIONS, SCORE_BANDS, RESULTS_CONTENT, OFFER, ACTIVE_CAMPAIGN_WEBHOOK_URL, GHL_WEBHOOK_URL };
 }
