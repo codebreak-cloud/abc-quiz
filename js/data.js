@@ -199,7 +199,7 @@ const OFFER = {
     "Join the Business Collective. Get things done before the panic, and still have something left afterwards.",
   ctaText: "Join The ADHD Business Collective",
   guarantee: "",
-  joinUrl: "https://www.ntabusiness.com/abc",
+  joinUrl: "https://www.ntabusiness.com/abc-pt",
 };
 
 // Webhook endpoints
