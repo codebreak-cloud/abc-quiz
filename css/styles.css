@@ -814,9 +814,34 @@ body { overflow-x: hidden; }
   .credibility { grid-template-columns: 1fr; }
 }
 
+/* Sticky Booking CTA */
+.sticky-booking-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--surface-card);
+  border-top: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-4);
+  z-index: 100;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+.sticky-booking-cta.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.sticky-booking-cta .btn {
+  max-width: 300px;
+}
+
 @media (max-width: 640px) {
   .container { padding: 0 var(--space-4); }
   .question-card { padding: var(--space-5); }
   .btn { width: 100%; }
   .coaster-parked { top: auto; bottom: 16px; right: 16px; width: 46px; height: 46px; }
+  .sticky-booking-cta { padding: var(--space-3); }
 }
