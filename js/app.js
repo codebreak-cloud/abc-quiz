@@ -253,15 +253,12 @@
 
     document.getElementById("result-bridge-cta").textContent = OFFER.bridgeCta;
     document.getElementById("result-cta-btn").textContent = OFFER.ctaText;
-    // CTA button uses onclick handler in HTML to scroll to booking form
-    const ctaBtn = document.getElementById("result-cta-btn");
-    if (!ctaBtn.onclick) {
-      ctaBtn.addEventListener("click", () => {
-        if (typeof trackCTAClick === "function") {
-          trackCTAClick(content.trapName);
-        }
-      });
-    }
+    document.getElementById("result-cta-btn").href = OFFER.joinUrl;
+    document.getElementById("result-cta-btn").addEventListener("click", () => {
+      if (typeof trackCTAClick === "function") {
+        trackCTAClick(content.trapName);
+      }
+    });
     document.getElementById("result-guarantee").textContent = OFFER.guarantee;
 
     showView("view-results");
@@ -310,28 +307,5 @@
     document.getElementById("header-exit-btn").addEventListener("click", exitQuiz);
     setupCaptureForm();
     initHeroCart();
-    setupStickyBookingCTA();
   });
-
-  /* Sticky Booking CTA visibility on scroll */
-  function setupStickyBookingCTA() {
-    const stickyCTA = document.getElementById("sticky-booking-cta");
-    const bookingSection = document.getElementById("booking-section");
-    if (!stickyCTA || !bookingSection) return;
-
-    function updateStickyVisibility() {
-      const bookingRect = bookingSection.getBoundingClientRect();
-      const isBookingSectionVisible = bookingRect.top < window.innerHeight && bookingRect.bottom > 0;
-
-      if (isBookingSectionVisible) {
-        stickyCTA.classList.add("is-hidden");
-      } else {
-        stickyCTA.classList.remove("is-hidden");
-      }
-    }
-
-    window.addEventListener("scroll", updateStickyVisibility);
-    window.addEventListener("resize", updateStickyVisibility);
-    updateStickyVisibility();
-  }
 })();

@@ -196,10 +196,10 @@ const RESULTS_CONTENT = {
 // it lives here rather than per-trap in RESULTS_CONTENT.
 const OFFER = {
   bridgeCta:
-    "Ready to get things done before the panic and still have something left afterwards? Let's discuss which of our pathways suits your needs the most.",
-  ctaText: "Book Your Clarity Call",
+    "Join the Business Collective. Get things done before the panic, and still have something left afterwards.",
+  ctaText: "Join The ADHD Business Collective",
   guarantee: "",
-  joinUrl: "#booking-section",
+  joinUrl: "https://www.ntabusiness.com/abc-pt",
 };
 
 // Webhook endpoints
