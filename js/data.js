@@ -143,7 +143,7 @@ const RESULTS_CONTENT = {
     bridgeBody:
       "Inside the ABC, the monthly Focus Strategy Call gets your ideas out of your head and into a one page plan with one main focus for the month ahead. The monthly Hotseat is where you bring the \"which idea do I actually run with\" question and get it answered by Kim and a room of business owners whose brains work like yours. Then the weekly body doubling sprints are where the chosen idea actually gets built, week after week, until it's done.",
     bridgeStrap: "Pick. Plan. Finish. With people who get it.",
-    closing: "Imagine opening your laptop in a month's time, {{firstName}}, and <strong>{{freeText}}</strong> is done.",
+    closing: "Imagine getting things done before the panic hits — and still having something left afterwards. That's what working with your brain, not against it, feels like. For {{firstName}}, that means <strong>{{freeText}}</strong>, actually done.",
   },
   BB: {
     trapName: "Boom and Bust",
@@ -164,7 +164,7 @@ const RESULTS_CONTENT = {
     bridgeBody:
       "The week has a shape inside the ABC. Body doubling sprints every Monday and Wednesday where you get the needle moving tasks done alongside other business owners doing the same. Friday sessions that pull you back to the plan. And when the flat weeks come, and they will, the community carries the rhythm until you're back. Kim's expert trainings even include End The Revenue Rollercoaster, because this trap is that common among ADHD business owners.",
     bridgeStrap: "",
-    closing: "Steady, without pretending your brain is something it isn't. Picture <strong>{{freeText}}</strong> actually happening every week, {{firstName}}, even the flat ones.",
+    closing: "Imagine getting things done before the panic hits — and still having something left afterwards. That's what working with your brain, not against it, feels like. For {{firstName}}, that means <strong>{{freeText}}</strong>, actually done.",
   },
   LMW: {
     trapName: "Last-Minute Wrecker",
@@ -185,7 +185,7 @@ const RESULTS_CONTENT = {
     bridgeBody:
       "Body doubling sprints on Mondays and Wednesdays give you a start time, an end time and a room full of business owners getting their heads down with you. That's urgency, twice a week, in a dose that doesn't flatten you. The Friday planning and strategy sessions break the big scary things into pieces you can actually start early. And Kim's trainings include Bouncing Back From Burnout and Regulating Your ADHD Nervous System, because Kim has lived this trap too.",
     bridgeStrap: "",
-    closing: "Get things done before the panic, and still have something left afterwards. That includes <strong>{{freeText}}</strong>, {{firstName}}, done calmly and early for once.",
+    closing: "Imagine getting things done before the panic hits — and still having something left afterwards. That's what working with your brain, not against it, feels like. For {{firstName}}, that means <strong>{{freeText}}</strong>, actually done.",
   },
 };
 
@@ -196,8 +196,8 @@ const RESULTS_CONTENT = {
 // it lives here rather than per-trap in RESULTS_CONTENT.
 const OFFER = {
   bridgeCta:
-    "Ready to get things done before the panic and still have something left afterwards? Let's discuss which of our pathways suits your needs the most.",
-  ctaText: "Book Your Clarity Call",
+    "If this sounds like you, the ADHD Business Collective might be worth a look — a coaching and accountability community built for ADHD business owners, with weekly body doubling, Friday strategy calls with Kim, and monthly trainings.\n\nNo pressure to decide today. If you're curious whether it's a fit, book a quick clarity call and we'll talk it through.",
+  ctaText: "Book a Clarity Call",
   guarantee: "",
   joinUrl: "#booking-section",
 };
