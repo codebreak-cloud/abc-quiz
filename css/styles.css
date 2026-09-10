@@ -1,5 +1,5 @@
 /* ============================================================
-   ABC QUIZ - STYLES
+   ABC QUIZ — STYLES
    Built on the real "ABC Quiz Design System" tokens exported from
    Claude Design (see css/tokens/ and ../design-system-handoff/).
    Component patterns (buttons, cards, scale options, score meter)
@@ -127,7 +127,7 @@ body { overflow-x: hidden; }
 /* !important here is deliberate: several view containers (e.g. .quiz-shell)
    declare their own `display` for layout, and without !important that
    single-class rule ties in specificity with .view/.view.is-active and can
-   win by source order alone - leaving an "inactive" view still visible. */
+   win by source order alone — leaving an "inactive" view still visible. */
 .view { display: none !important; }
 .view.is-active { display: block !important; }
 .is-hidden { display: none !important; }
@@ -410,7 +410,7 @@ body { overflow-x: hidden; }
 }
 .quiz-shell > .container { position: relative; z-index: 1; }
 
-/* Subtle ambient background - floating tinted circles on a clean,
+/* Subtle ambient background — floating tinted circles on a clean,
    neutral page background so the brand colors in the circles pop
    instead of competing with a tinted canvas. */
 .quiz-bg {
